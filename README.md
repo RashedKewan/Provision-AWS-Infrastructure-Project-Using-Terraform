@@ -33,7 +33,7 @@
 
 Clone Project
 ```bash
-  git clone https://github.com/RashedKewan/Kubernetes-Summary-Task.git
+  git clone https://github.com/RashedKewan/Provision-AWS-Infrastructure-Project-Using-Terraform.git
 ```
 
 
