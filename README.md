@@ -44,6 +44,7 @@ Clone Project
 3. Choose your IAM user name ( not the check box ).
 4. Open the Security credentials tab , and then choose Create access key .
 5. To see the new access key, choose Show. Your credentials resemble the following :
+    
     • `Access key ID`: AKIAIOSFODNN7EXAMPLE
 
     • `Secret access key` : wJalrXUtnFEMI/K7MDENG/bPXRficYEXAMPLEKEY
