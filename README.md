@@ -32,7 +32,7 @@
 - VS Code
 
 Clone Project
-```bash
+```shell
   git clone https://github.com/RashedKewan/Provision-AWS-Infrastructure-Project-Using-Terraform.git
 ```
 
@@ -49,7 +49,7 @@ Clone Project
     • `Secret access key` : wJalrXUtnFEMI/K7MDENG/bPXRficYEXAMPLEKEY
 6. To download the key pair, choose Download .csv file. Store the .csv file with keys in a secure location .
 
-```golang
+```HCL
 provider "aws"{
     
     region     = "eu-central-1"
