@@ -1,0 +1,3 @@
+region      = ""     # Example : region      =  "eu-central-1"
+access_key  = ""     # Example : access_key  =  "AKIAIOSFODNN7EXAMPLE"
+secret_key  = ""     # Example : secret_key  =  "wJalrXUtnFEMI/K7MDENG/bPXRficYEXAMPLEKEY"

@@ -68,14 +68,18 @@ Inside the `terraform.tfvar` file fill the bellow variables, see notes exmples i
 
 - ### *Open Terminal:*
 - ### *Init terraform:*
-> `terraform` init
+```shell
+terraform init
+```
 
 - ### *Plan Your Terraform Projec:*
-> `terraform` plan 
-
+```shell
+terraform plan 
+```
 - ### *Apply Your Terraform Projec:*
-> `terraform` apply -var-file terraform.tfvar
-
+```shell
+terraform apply -var-file terraform.tfvar
+```
 #
 
 # To see results, Enter your AWS account, then: 

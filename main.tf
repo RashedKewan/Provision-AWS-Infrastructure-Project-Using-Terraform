@@ -1,13 +1,32 @@
+# provider "aws"{
+    
+#     region     = "eu-central-1"
+#     access_key = "AKIASB3MYG7E2DY376X6"
+#     secret_key = "VwE5YYV/mQ07Gtha9Q7yCGENqB5UkghNEQjonkzj"
+# }
+
 provider "aws"{
     
-    region     = "eu-central-1"
-    access_key = "YOUR ACCESS KEY"
-    secret_key = "YOUR SECRET KEY"
+    region     = var.region
+    access_key = var.access_key
+    secret_key = var.secret_key
 }
 
 
+variable "region" {
+  type = string
+  default = "eu-central-1"
+}
 
+variable "access_key" {
+  description = "AWS Access Key"
+  
+}
 
+variable "secret_key" {
+  description = "AWS Secret Key"
+  
+}
 
 
 
@@ -21,11 +40,9 @@ provider "aws"{
 resource "aws_vpc" "vpc" {
     cidr_block       = "10.0.0.0/16"
     tags             = {
-        Name         = "vpc-terraform"
+      Name = "vpc-terraform"
     }
 }
-
-
 
 ###################################################################################################
 
@@ -77,7 +94,7 @@ resource "aws_route_table" "rtbl_a" {
 resource "aws_subnet" "subnet_public_a" {
   vpc_id     = aws_vpc.vpc.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "eu-central-1a"
+  availability_zone = "${var.region}a"
   tags       = {
     Name     = "subnet_public_a"
   }
@@ -185,7 +202,7 @@ resource "aws_eip" "one" {
 resource "aws_instance" "web_server_instance" {
     ami = "ami-06ce824c157700cd2"
     instance_type = "t2.micro"
-    availability_zone = "eu-central-1a"
+    availability_zone = "${var.region}a"
     
     key_name  = "rasheeds_key"
     network_interface {
