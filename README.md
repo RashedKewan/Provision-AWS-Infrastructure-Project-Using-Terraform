@@ -50,12 +50,14 @@ Clone Project
     • `Secret access key` : wJalrXUtnFEMI/K7MDENG/bPXRficYEXAMPLEKEY
 6. To download the key pair, choose Download .csv file. Store the .csv file with keys in a secure location .
 
+#
+
+Inside the `terraform.tfvar` file fill the bellow variables, see notes exmples in the file.
 ```HCL
-provider "aws"{
-    
-    region     = "eu-central-1"
-    access_key = "AKIAIOSFODNN7EXAMPLE"
-    secret_key = "wJalrXUtnFEMI/K7MDENG/bPXRficYEXAMPLEKEY"
+
+    region     = ""
+    access_key = ""
+    secret_key = ""
 }
 ```
 ## *To Get Your Region*
@@ -72,8 +74,11 @@ provider "aws"{
 > `terraform` plan 
 
 - ### *Apply Your Terraform Projec:*
-> `terraform` apply 
+> `terraform` apply -var-file terraform.tfvar
 
+#
+
+# To see results, Enter your AWS account, then: 
 - On the serch bar, search for `EC2`, then select it.
 - On the menu in the left pageside , open `instances`, then select  `instances`.
 - On the *Instances table* select the instance with `Name` : web-server.
@@ -85,10 +90,11 @@ provider "aws"{
 
 <img  alt="image" src="imgs/open-address.png">
 
-## Web-Server
+# Web Server Page
 <img width="932" alt="image" src="imgs/connecting-to-apache.png">
 
 #
+# *Implementaion*
 
 > 1. Create vpc
 
